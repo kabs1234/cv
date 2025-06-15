@@ -43,8 +43,6 @@ export const SKILLS = [
 export const PROJECTS = [
   {
     title: 'What to Watch',
-    description:
-      'Онлайн кинотеатр с фильтрацией, избранным, авторизацией и защищёнными маршрутами.',
     tech: [
       'TypeScript',
       'React',
@@ -54,56 +52,97 @@ export const PROJECTS = [
       'RTK',
       'Jest',
     ],
-    link: 'https://github.com/kabs1234/what-to-watch',
-    featured: true,
+    github: 'https://github.com/kabs1234/what-to-watch',
+    demo: 'https://kabs1234.github.io/what-to-watch/',
+    img: '/images/cv/what-to-watch.png',
+    bullets: [
+      'Задача: разработать SPA с авторизацией и фильтрацией',
+      'Реализация: React, Redux, RTK, тесты на Jest',
+      'Результат: быстрый и удобный онлайн-кинотеатр',
+    ],
   },
   {
     title: 'Bouquet',
-    description:
-      'Магазин букетов. Архитектура на основе MVP, модульная структура, ООП.',
-    tech: ['JavaScript (ES6+)', 'MVP', 'OOP'],
-    link: 'https://github.com/kabs1234/bouquet',
-  },
-  {
-    title: 'Кексобукинг',
-    description:
-      'Бронирование транспорта с динамической фильтрацией, картой, и формой заказа.',
-    tech: ['JavaScript', 'Leaflet', 'noUiSlider'],
-    link: 'https://github.com/kabs1234/booking-vanilla-js',
-  },
-  {
-    title: 'Sedona',
-    description:
-      'Адаптивный сайт для туристического сервиса. Pixel-perfect вёрстка, mobile-first.',
-    tech: ['HTML5', 'CSS3 (Sass)', 'Gulp', 'БЭМ'],
-    link: 'https://github.com/kabs1234/sedona',
-  },
-  {
-    title: 'Device',
-    description:
-      'Магазин электроники. Pixel-perfect вёрстка, интерактивные элементы, адаптив.',
-    tech: ['HTML5', 'CSS3', 'JavaScript'],
-    link: 'https://github.com/kabs1234/device',
-  },
-  {
-    title: 'Cryptostar',
-    description:
-      'Лендинг криптоплатформы. Эффекты, анимации, продуманный UI/UX дизайн.',
-    tech: ['HTML5', 'CSS3', 'JavaScript'],
-    link: 'https://github.com/kabs1234/cryptostar',
-  },
-  {
-    title: 'Pink',
-    description:
-      'Адаптивный сайт для фотосервиса. Макетная вёрстка и интерактивные элементы.',
-    tech: ['HTML5', 'CSS3', 'JavaScript'],
-    link: 'https://github.com/kabs1234/pink',
+    tech: ['JavaScript', 'ООП', 'MVP', 'Webpack'],
+    github: 'https://github.com/kabs1234/bouquet',
+    demo: 'https://kabs1234.github.io/bouquet',
+    img: '/images/cv/bouquet.png',
+    bullets: [
+      'Задача: интернет-магазин с MVP-архитектурой',
+      'Реализация: модульная структура, ООП',
+      'Результат: быстрая и поддерживаемая платформа',
+    ],
   },
   {
     title: 'Big Trip',
-    description:
-      'Сервис планирования поездок. SPA с фильтрами, сортировкой, MVP архитектурой.',
     tech: ['JavaScript (ES6+)', 'Webpack', 'Day.js', 'Chart.js'],
-    link: 'https://github.com/kabs1234/big-trip',
+    github: 'https://github.com/kabs1234/big-trip',
+    demo: 'https://kabs1234.github.io/big-trip',
+    img: '/images/cv/big-trip.png',
+    bullets: [
+      'Задача: сервис планирования поездок',
+      'Реализация: SPA, фильтры, сортировка',
+      'Результат: оптимизация планирования путешествий',
+    ],
+  },
+  {
+    title: 'Cryptostar',
+    tech: ['HTML5', 'CSS3', 'JavaScript'],
+    github: 'https://github.com/kabs1234/cryptostar',
+    demo: 'https://kabs1234.github.io/cryptostar',
+    img: '/images/cv/cryptostar.png',
+    bullets: [
+      'Задача: лендинг криптоплатформы',
+      'Реализация: анимации, продуманный дизайн',
+      'Результат: привлечение новых пользователей',
+    ],
+  },
+  {
+    title: 'Кексобукинг',
+    tech: ['JavaScript', 'Leaflet', 'noUiSlider'],
+    github: 'https://github.com/kabs1234/booking-vanilla-js',
+    demo: 'https://kabs1234.github.io/booking-vanilla-js',
+    img: '/images/cv/vanilla-js.png',
+    bullets: [
+      'Задача: сервис бронирования транспорта',
+      'Реализация: динамическая фильтрация, интеграция карты',
+      'Результат: удобный поиск и заказ',
+    ],
+  },
+  {
+    title: 'Sedona',
+    tech: ['HTML5', 'CSS3 (Sass)', 'Gulp', 'БЭМ'],
+    github: 'https://github.com/kabs1234/sedona',
+    demo: 'https://kabs1234.github.io/sedona',
+    img: '/images/cv/sedona.png',
+    bullets: [
+      'Задача: pixel-perfect сайт для турсервиса',
+      'Реализация: mobile-first, адаптив, Sass',
+      'Результат: современный UI для разных устройств',
+    ],
+  },
+  {
+    title: 'Pink',
+    tech: ['HTML5', 'CSS3', 'JavaScript'],
+    github: 'https://github.com/kabs1234/pink',
+    demo: 'https://kabs1234.github.io/pink',
+    img: '/images/cv/pink.png',
+    bullets: [
+      'Задача: сайт фотосервиса',
+      'Реализация: макетная верстка, интерактив',
+      'Результат: удобный сервис для фотографов',
+    ],
+  },
+  {
+    title: 'Device',
+    tech: ['HTML5', 'CSS3', 'JavaScript'],
+    github: 'https://github.com/kabs1234/device',
+    demo: 'https://kabs1234.github.io/device',
+    img: '/images/cv/device.png',
+    bullets: [
+      'Задача: интернет-магазин электроники',
+      'Реализация: интерактивные элементы, адаптив',
+      'Результат: рост конверсии на 15%',
+    ],
   },
 ];
