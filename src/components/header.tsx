@@ -66,7 +66,7 @@ export default function Header(): React.ReactElement {
               >
                 <div className="w-4 h-4 flex-shrink-0">
                   <img
-                    src="../../public/images/github-mark.svg"
+                    src="./images/github-mark.svg"
                     alt="GitHub"
                     className="w-full h-full object-contain"
                   />
