@@ -5,6 +5,7 @@ import {
   CardContent,
   CardFooter,
 } from '@/components/ui/card';
+import { Link } from 'react-router-dom';
 import { Briefcase, Code2, LayoutTemplate, GitBranch } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
@@ -76,6 +77,27 @@ export default function Experience() {
           <Badge variant="outline">HTML/CSS</Badge>
           <Badge variant="outline">Адаптивная верстка</Badge>
         </CardFooter>
+
+        <div className="flex justify-center">
+          <Link
+            to="/projects"
+            style={{
+              display: 'inline-block',
+              padding: '10px 24px',
+              background: '#1976d2',
+              color: '#fff',
+              borderRadius: '6px',
+              textDecoration: 'none',
+              fontWeight: 600,
+              boxShadow: '0 2px 8px rgba(25, 118, 210, 0.15)',
+              transition: 'background 0.2s',
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.background = '#1565c0')}
+            onMouseOut={(e) => (e.currentTarget.style.background = '#1976d2')}
+          >
+            Смотреть все проекты
+          </Link>
+        </div>
       </Card>
     </div>
   );
