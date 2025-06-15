@@ -1,17 +1,18 @@
-import Header from './components/header';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/home';
+import Layout from './components/layout';
 import Projects from './components/projects';
-import Experience from './components/experience';
-import About from './components/about';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-      <Header />
-      <div className="mt-6" />
-      <About />
-      <Experience />
-      <Projects />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="projects" element={<Projects />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
