@@ -94,6 +94,7 @@ export default function Experience() {
             }}
             onMouseOver={(e) => (e.currentTarget.style.background = '#1565c0')}
             onMouseOut={(e) => (e.currentTarget.style.background = '#1976d2')}
+            onClick={() => window.scrollTo({ top: 0, left: 0 })}
           >
             Смотреть все проекты
           </Link>
