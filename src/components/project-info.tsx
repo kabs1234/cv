@@ -18,7 +18,7 @@ function ProjectInfo({
 }: ProjectInfoProps): React.ReactElement {
   return (
     <div className="p-6 pt-0">
-      <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+      <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
         {title}
       </h3>
       <div className="flex flex-wrap gap-2 mb-2">
