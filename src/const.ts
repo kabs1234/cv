@@ -54,7 +54,7 @@ export const PROJECTS = [
     ],
     github: 'https://github.com/kabs1234/what-to-watch',
     demo: 'https://kabs1234.github.io/what-to-watch/',
-    img: '/images/cv/what-to-watch.png',
+    img: './images/cv/what-to-watch.png',
     bullets: [
       'Задача: разработать SPA с авторизацией и фильтрацией',
       'Реализация: React, Redux, RTK, тесты на Jest',
@@ -66,7 +66,7 @@ export const PROJECTS = [
     tech: ['JavaScript', 'ООП', 'MVP', 'Webpack'],
     github: 'https://github.com/kabs1234/bouquet',
     demo: 'https://kabs1234.github.io/bouquet',
-    img: '/images/cv/bouquet.png',
+    img: './images/cv/bouquet.png',
     bullets: [
       'Задача: интернет-магазин с MVP-архитектурой',
       'Реализация: модульная структура, ООП',
@@ -78,7 +78,7 @@ export const PROJECTS = [
     tech: ['JavaScript (ES6+)', 'Webpack', 'Day.js', 'Chart.js'],
     github: 'https://github.com/kabs1234/big-trip',
     demo: 'https://kabs1234.github.io/big-trip',
-    img: '/images/cv/big-trip.png',
+    img: './images/cv/big-trip.png',
     bullets: [
       'Задача: сервис планирования поездок',
       'Реализация: SPA, фильтры, сортировка',
@@ -90,7 +90,7 @@ export const PROJECTS = [
     tech: ['HTML5', 'CSS3', 'JavaScript'],
     github: 'https://github.com/kabs1234/cryptostar',
     demo: 'https://kabs1234.github.io/cryptostar',
-    img: '/images/cv/cryptostar.png',
+    img: './images/cv/cryptostar.png',
     bullets: [
       'Задача: лендинг криптоплатформы',
       'Реализация: анимации, продуманный дизайн',
@@ -102,7 +102,7 @@ export const PROJECTS = [
     tech: ['JavaScript', 'Leaflet', 'noUiSlider'],
     github: 'https://github.com/kabs1234/booking-vanilla-js',
     demo: 'https://kabs1234.github.io/booking-vanilla-js',
-    img: '/images/cv/vanilla-js.png',
+    img: './images/cv/vanilla-js.png',
     bullets: [
       'Задача: сервис бронирования транспорта',
       'Реализация: динамическая фильтрация, интеграция карты',
@@ -114,7 +114,7 @@ export const PROJECTS = [
     tech: ['HTML5', 'CSS3 (Sass)', 'Gulp', 'БЭМ'],
     github: 'https://github.com/kabs1234/sedona',
     demo: 'https://kabs1234.github.io/sedona',
-    img: '/images/cv/sedona.png',
+    img: './images/cv/sedona.png',
     bullets: [
       'Задача: pixel-perfect сайт для турсервиса',
       'Реализация: mobile-first, адаптив, Sass',
@@ -126,7 +126,7 @@ export const PROJECTS = [
     tech: ['HTML5', 'CSS3', 'JavaScript'],
     github: 'https://github.com/kabs1234/pink',
     demo: 'https://kabs1234.github.io/pink',
-    img: '/images/cv/pink.png',
+    img: './images/cv/pink.png',
     bullets: [
       'Задача: сайт фотосервиса',
       'Реализация: макетная верстка, интерактив',
@@ -138,7 +138,7 @@ export const PROJECTS = [
     tech: ['HTML5', 'CSS3', 'JavaScript'],
     github: 'https://github.com/kabs1234/device',
     demo: 'https://kabs1234.github.io/device',
-    img: '/images/cv/device.png',
+    img: './images/cv/device.png',
     bullets: [
       'Задача: интернет-магазин электроники',
       'Реализация: интерактивные элементы, адаптив',

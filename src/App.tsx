@@ -5,7 +5,7 @@ import Projects from './components/projects';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/cv">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
