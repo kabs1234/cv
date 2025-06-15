@@ -33,9 +33,6 @@ export default function Header(): React.ReactElement {
 
           {/* Правая колонка - Контакты */}
           <div className="bg-white/90 p-3 rounded-lg shadow-sm border border-gray-100 h-fit">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              Контакты
-            </h3>
             <div className="space-y-1">
               <a
                 href="mailto:azhashkeev@gmail.com"
@@ -89,6 +86,33 @@ export default function Header(): React.ReactElement {
                   </p>
                 </div>
               </div>
+
+              <a
+                href="https://www.openstreetmap.org/relation/3386005"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                <svg
+                  className="w-4 h-4 text-purple-600 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"
+                  />
+                </svg>
+                <div>
+                  <p className="text-xs text-gray-500">Адрес</p>
+                  <p className="text-gray-700 font-medium text-sm">
+                    Караганда, Казахстан
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
