@@ -1,0 +1,212 @@
+{
+  "header": {
+    "title": "My Resume",
+    "projects": "Projects",
+    "experience": "Experience",
+    "description": "Junior Frontend Developer with experience in building SPAs using React and TypeScript, including authentication, routing, filtering, and unit tests. Confident in modern stack (RTK, Axios, Jest) and scalable architecture. Ready to quickly join a team and deliver results.",
+    "address": "Address",
+    "city": "Karaganda, Kazakhstan"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Here are some of my main projects.",
+    "backToMain": "← Back to main"
+  },
+  "projectsList": [
+    {
+      "title": "What to Watch",
+      "bullets": [
+        "Task: develop a SPA with authorization and filtering",
+        "Implementation: React, Redux, RTK, tests with Jest",
+        "Result: fast and convenient online cinema"
+      ]
+    },
+    {
+      "title": "Bouquet",
+      "bullets": [
+        "Task: online store with MVP architecture",
+        "Implementation: modular structure, OOP",
+        "Result: fast and maintainable platform"
+      ]
+    },
+    {
+      "title": "Big Trip",
+      "bullets": [
+        "Task: trip planning service",
+        "Implementation: SPA, filters, sorting",
+        "Result: optimized travel planning"
+      ]
+    },
+    {
+      "title": "Cryptostar",
+      "bullets": [
+        "Task: crypto platform landing page",
+        "Implementation: animations, thoughtful design",
+        "Result: attracting new users"
+      ]
+    },
+    {
+      "title": "Keksobooking",
+      "bullets": [
+        "Task: transport booking service",
+        "Implementation: dynamic filtering, map integration",
+        "Result: convenient search and booking"
+      ]
+    },
+    {
+      "title": "Sedona",
+      "bullets": [
+        "Task: pixel-perfect website for travel service",
+        "Implementation: mobile-first, adaptive, Sass",
+        "Result: modern UI for all devices"
+      ]
+    },
+    {
+      "title": "Pink",
+      "bullets": [
+        "Task: photo service website",
+        "Implementation: layout design, interactivity",
+        "Result: convenient service for photographers"
+      ]
+    },
+    {
+      "title": "Device",
+      "bullets": [
+        "Task: electronics online store",
+        "Implementation: interactive elements, adaptive",
+        "Result: ready-made page layout"
+      ]
+    }
+  ],
+  "experience": {
+    "title": "Experience",
+    "description": "My work experience and skills.",
+    "projectPractice": "Project Practice (non-commercial)",
+    "period": "February 2023 — Present",
+    "mainDescription": "Developed projects independently and as part of training without a commercial contract, but with a focus on real-world tasks, architecture, testing, and clean code.",
+    "achievements": "Main Achievements:",
+    "badges": [
+      "8 pet-projects",
+      "SPA",
+      "Production-ready"
+    ],
+    "achievementsList": [
+      "Created 8 pet-projects (SPA, interactive interfaces, layout, maps, forms, filters)",
+      "Developed several educational mini-projects",
+      "Worked according to mockups and specifications",
+      "Packaged projects in production-ready format"
+    ],
+    "technologies": [
+      "JavaScript",
+      "React",
+      "TypeScript",
+      "Redux",
+      "HTML/CSS"
+    ],
+    "adaptiveLayout": "Adaptive layout"
+  },
+  "projects": [
+    {
+      "title": "What to Watch",
+      "bullets": [
+        "Task: develop a SPA with authorization and filtering",
+        "Implementation: React, Redux, RTK, tests with Jest",
+        "Result: fast and convenient online cinema"
+      ]
+    },
+    {
+      "title": "Bouquet",
+      "bullets": [
+        "Task: online store with MVP architecture",
+        "Implementation: modular structure, OOP",
+        "Result: fast and maintainable platform"
+      ]
+    },
+    {
+      "title": "Big Trip",
+      "bullets": [
+        "Task: trip planning service",
+        "Implementation: SPA, filters, sorting",
+        "Result: optimized travel planning"
+      ]
+    },
+    {
+      "title": "Cryptostar",
+      "bullets": [
+        "Task: crypto platform landing page",
+        "Implementation: animations, thoughtful design",
+        "Result: attracting new users"
+      ]
+    },
+    {
+      "title": "Keksobooking",
+      "bullets": [
+        "Task: transport booking service",
+        "Implementation: dynamic filtering, map integration",
+        "Result: convenient search and booking"
+      ]
+    },
+    {
+      "title": "Sedona",
+      "bullets": [
+        "Task: pixel-perfect website for travel service",
+        "Implementation: mobile-first, adaptive, Sass",
+        "Result: modern UI for all devices"
+      ]
+    },
+    {
+      "title": "Pink",
+      "bullets": [
+        "Task: photo service website",
+        "Implementation: layout design, interactivity",
+        "Result: convenient service for photographers"
+      ]
+    },
+    {
+      "title": "Device",
+      "bullets": [
+        "Task: electronics online store",
+        "Implementation: interactive elements, adaptive",
+        "Result: ready-made page layout"
+      ]
+    }
+  ],
+  "skills": [
+    "HTML5, CSS3, SCSS",
+    "JavaScript (ES6+), TypeScript",
+    "React, Redux, Redux Toolkit",
+    "Jest, RTL, Vitest",
+    "Gulp, Git",
+    "Adaptive layout",
+    "React",
+    "Redux",
+    "Redux Toolkit",
+    "React Router",
+    "Jest",
+    "React Testing Library",
+    "Vitest",
+    "Git",
+    "Gulp",
+    "Axios",
+    "Leaflet.js",
+    "SPA",
+    "OOP",
+    "MVC/MVP",
+    "REST API",
+    "Mobile-first",
+    "Pixel Perfect"
+  ],
+  "skills.sectionTitle": "Technical Skills",
+  "skills.categories": [
+    "Languages",
+    "Frameworks and Libraries",
+    "Testing",
+    "Development Tools",
+    "Approaches"
+  ],
+  "projectInfo": {
+    "details": "Project Details",
+    "demo": "Demo",
+    "code": "Code"
+  }
+}

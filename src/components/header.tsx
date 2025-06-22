@@ -1,8 +1,33 @@
 import { Mail, Phone, Send } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Header(): React.ReactElement {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
   return (
     <div className="relative overflow-hidden bg-white shadow-sm">
+      {/* Language Switcher */}
+      <div className="absolute top-4 right-6 z-20">
+        <button
+          className={`px-2 py-1 rounded-l border border-gray-300 bg-white ${
+            i18n.language === 'ru' ? 'font-bold text-blue-600' : ''
+          }`}
+          onClick={() => changeLanguage('ru')}
+        >
+          RU
+        </button>
+        <button
+          className={`px-2 py-1 rounded-r border border-gray-300 bg-white ${
+            i18n.language === 'en' ? 'font-bold text-blue-600' : ''
+          }`}
+          onClick={() => changeLanguage('en')}
+        >
+          EN
+        </button>
+      </div>
       {/* Оригинальный градиентный фон */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
 
@@ -23,11 +48,7 @@ export default function Header(): React.ReactElement {
             </div>
 
             <p className="text-gray-700 text-lg leading-relaxed">
-              Junior Frontend Developer с опытом создания SPA на React и
-              TypeScript, включая авторизацию, роутинг, фильтрацию и unit-тесты.
-              Уверенно владею современным стеком (RTK, Axios, Jest) и умею
-              строить масштабируемую архитектуру. Готов быстро влиться в команду
-              и приносить результат.
+              {t('header.description')}
             </p>
           </div>
 
@@ -107,9 +128,9 @@ export default function Header(): React.ReactElement {
                   />
                 </svg>
                 <div>
-                  <p className="text-xs text-gray-500">Адрес</p>
+                  <p className="text-xs text-gray-500">{t('header.address')}</p>
                   <p className="text-gray-700 font-medium text-sm">
-                    Караганда, Казахстан
+                    {t('header.city')}
                   </p>
                 </div>
               </a>

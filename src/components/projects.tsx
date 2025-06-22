@@ -3,20 +3,22 @@ import { PROJECTS } from '../const';
 import { Code2 } from 'lucide-react';
 import ProjectInfo from './project-info';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function Projects(): React.ReactElement {
+  const { t } = useTranslation();
   return (
     <div className="max-w-6xl mx-auto px-6 pb-20 space-y-20 mt-10">
       <section className="space-y-8">
         <div className="mb-4">
           <Link to="/" className="text-blue-600 hover:underline font-medium">
-            ← На главную
+            {t('projects.backToMain')}
           </Link>
         </div>
         <div className="text-center">
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-white font-semibold text-lg shadow-lg">
             <Code2 className="w-6 h-6" />
-            Проекты
+            {t('projects.title')}
           </div>
         </div>
 
@@ -37,9 +39,9 @@ export default function Projects(): React.ReactElement {
                   />
                 </div>
                 <ProjectInfo
-                  title={project.title}
+                  title={t(project.title)}
                   tech={project.tech}
-                  bullets={project.bullets}
+                  bullets={project.bullets.map(b => t(b))}
                   demo={project.demo}
                   github={project.github}
                 />

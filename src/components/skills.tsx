@@ -8,43 +8,46 @@ import {
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
+import { useTranslation } from 'react-i18next';
+
 export default function Skills() {
+  const { t } = useTranslation();
   const skillCategories = [
     {
       icon: Code,
-      title: 'Языки',
+      title: t('skills.categories.0'),
       gradient: 'from-amber-500 to-orange-500',
-      skills: ['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3', 'Sass/SCSS'],
+      skills: [t('skills.0'), t('skills.1'), t('skills.2'), t('skills.3'), t('skills.4')],
     },
     {
       icon: LayoutTemplate,
-      title: 'Фреймворки и библиотеки',
+      title: t('skills.categories.1'),
       gradient: 'from-blue-500 to-cyan-500',
-      skills: ['React', 'Redux', 'Redux Toolkit', 'React Router'],
+      skills: [t('skills.5'), t('skills.6'), t('skills.7'), t('skills.8')],
     },
     {
       icon: TestTube2,
-      title: 'Тестирование',
+      title: t('skills.categories.2'),
       gradient: 'from-green-500 to-emerald-500',
-      skills: ['Jest', 'React Testing Library', 'Vitest'],
+      skills: [t('skills.9'), t('skills.10'), t('skills.11')],
     },
     {
       icon: Settings,
-      title: 'Инструменты разработки',
+      title: t('skills.categories.3'),
       gradient: 'from-purple-500 to-fuchsia-500',
-      skills: ['Git', 'Gulp', 'Axios', 'Leaflet.js'],
+      skills: [t('skills.12'), t('skills.13'), t('skills.14'), t('skills.15')],
     },
     {
       icon: Cpu,
-      title: 'Подходы',
+      title: t('skills.categories.4'),
       gradient: 'from-rose-500 to-pink-500',
       skills: [
-        'SPA',
-        'OOP',
-        'MVC/MVP',
-        'REST API',
-        'Mobile-first',
-        'Pixel Perfect',
+        t('skills.16'),
+        t('skills.17'),
+        t('skills.18'),
+        t('skills.19'),
+        t('skills.20'),
+        t('skills.21'),
       ],
     },
   ];
@@ -55,7 +58,7 @@ export default function Skills() {
         <div className="p-2 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-600 shadow-lg mb-1">
           <Star className="w-5 h-5 text-white" />
         </div>
-        <h2 className="text-lg font-semibold text-gray-900 text-center">Технические навыки</h2>
+        <h2 className="text-lg font-semibold text-gray-900 text-center">{t('skills.sectionTitle')}</h2>
       </div>
 
       <div className="space-y-5">
