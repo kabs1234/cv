@@ -105,6 +105,10 @@
       "Responsive layout"
     ]
   },
+  "featured": {
+    "title": "Featured projects",
+    "viewAll": "All projects ({{total}})"
+  },
   "projects": {
     "title": "Projects",
     "backToMain": "← Back to main",

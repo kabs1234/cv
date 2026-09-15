@@ -82,6 +82,12 @@ export const CONTACTS = [
 
 export const ADDRESS_MAP_URL = 'https://www.openstreetmap.org/relation/3386005';
 
+export const FEATURED_PROJECT_IDS: ReadonlyArray<ProjectId> = [
+  'whatToWatch',
+  'bigTrip',
+  'bouquet',
+];
+
 export const REPOSITORY_URL = 'https://github.com/kabs1234/cv';
 
 export const CURRENT_YEAR = new Date().getFullYear();
