@@ -26,6 +26,10 @@
     "builtWith": "Built with React, TypeScript and Vite",
     "source": "Source code"
   },
+  "theme": {
+    "toLight": "Switch to light theme",
+    "toDark": "Switch to dark theme"
+  },
   "skills": {
     "sectionTitle": "Technical Skills",
     "categories": {

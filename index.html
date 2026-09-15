@@ -31,6 +31,22 @@
     }(window.location))
   </script>
   <!-- End Single Page Apps for GitHub Pages -->
+
+  <!-- Apply the stored or system theme before first paint; key must match src/theme.ts -->
+  <script type="text/javascript">
+    (function (root) {
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var stored = null;
+      try {
+        stored = localStorage.getItem('cv-theme');
+      } catch (error) {
+        stored = null;
+      }
+      if (stored === 'dark' || (stored !== 'light' && prefersDark)) {
+        root.classList.add('dark');
+      }
+    }(document.documentElement))
+  </script>
 </head>
 
 <body>

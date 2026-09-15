@@ -26,6 +26,10 @@
     "builtWith": "Сделано на React, TypeScript и Vite",
     "source": "Исходный код"
   },
+  "theme": {
+    "toLight": "Включить светлую тему",
+    "toDark": "Включить тёмную тему"
+  },
   "skills": {
     "sectionTitle": "Технические навыки",
     "categories": {

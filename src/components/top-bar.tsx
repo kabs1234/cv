@@ -4,6 +4,7 @@ import { Link, NavLink, type NavLinkRenderProps } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 import LanguageSwitcher from './language-switcher';
+import ThemeToggle from './theme-toggle';
 
 const NAV_ITEMS = [
   { id: 'resume', to: '/' },
@@ -40,6 +41,7 @@ export default function TopBar(): React.ReactElement {
       </nav>
       <div className="flex items-center gap-2">
         <LanguageSwitcher />
+        <ThemeToggle />
       </div>
     </header>
   );
