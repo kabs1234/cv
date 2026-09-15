@@ -12,14 +12,15 @@ export default function MetaList({
   className,
 }: MetaListProps): ReactElement {
   return (
-    <ul className={cn('flex flex-wrap font-mono', className)}>
-      {items.map((item, index) => (
-        <li key={item}>
-          {index > 0 && (
-            <span aria-hidden="true" className="px-1.5 text-accent-ink">
-              ·
-            </span>
-          )}
+    <ul className={cn('flex flex-wrap overflow-hidden font-mono', className)}>
+      {items.map((item) => (
+        <li key={item} className="-ml-[1.5em] pr-[1.5em]">
+          <span
+            aria-hidden="true"
+            className="inline-block w-[1.5em] text-center text-accent-ink"
+          >
+            ·
+          </span>
           {item}
         </li>
       ))}
