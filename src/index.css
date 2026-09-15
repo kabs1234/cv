@@ -154,3 +154,27 @@
     color: var(--accent-ink);
   }
 }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+  :root {
+    --background: #ffffff;
+    font-size: 12px;
+  }
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+  .print-url::after {
+    content: " (" attr(href) ")";
+    font-family: var(--font-mono);
+    font-size: 0.8em;
+    font-weight: 400;
+    color: var(--muted-foreground);
+    word-break: break-all;
+  }
+}

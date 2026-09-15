@@ -30,6 +30,10 @@
     "toLight": "Switch to light theme",
     "toDark": "Switch to dark theme"
   },
+  "print": {
+    "label": "PDF ↓",
+    "hint": "Save the CV as PDF"
+  },
   "skills": {
     "sectionTitle": "Technical Skills",
     "categories": {

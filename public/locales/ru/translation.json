@@ -30,6 +30,10 @@
     "toLight": "Включить светлую тему",
     "toDark": "Включить тёмную тему"
   },
+  "print": {
+    "label": "PDF ↓",
+    "hint": "Сохранить резюме в PDF"
+  },
   "skills": {
     "sectionTitle": "Технические навыки",
     "categories": {

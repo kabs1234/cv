@@ -4,6 +4,7 @@ import { Link, NavLink, type NavLinkRenderProps } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 import LanguageSwitcher from './language-switcher';
+import PrintButton from './print-button';
 import ThemeToggle from './theme-toggle';
 
 const NAV_ITEMS = [
@@ -42,6 +43,7 @@ export default function TopBar(): React.ReactElement {
       <div className="flex items-center gap-2">
         <LanguageSwitcher />
         <ThemeToggle />
+        <PrintButton />
       </div>
     </header>
   );
