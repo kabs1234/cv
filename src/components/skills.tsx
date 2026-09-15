@@ -1,3 +1,4 @@
+import type { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import MetaList from './meta-list';
@@ -19,7 +20,7 @@ const SKILL_CATEGORIES = [
 
 export default function Skills({
   number,
-}: NumberedSectionProps): React.ReactElement {
+}: NumberedSectionProps): ReactElement {
   const { t } = useTranslation();
 
   return (

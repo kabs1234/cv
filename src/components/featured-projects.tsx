@@ -1,3 +1,4 @@
+import type { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
@@ -25,7 +26,7 @@ function isFeaturedProject(projectId: ProjectId): boolean {
 
 function FeaturedProjectCard({
   project,
-}: FeaturedProjectCardProps): React.ReactElement {
+}: FeaturedProjectCardProps): ReactElement {
   const { t } = useTranslation();
 
   return (
@@ -50,7 +51,7 @@ function FeaturedProjectCard({
 
 export default function FeaturedProjects({
   number,
-}: NumberedSectionProps): React.ReactElement {
+}: NumberedSectionProps): ReactElement {
   const { t } = useTranslation();
   const featuredProjects = PROJECTS.filter((project) =>
     isFeaturedProject(project.id),

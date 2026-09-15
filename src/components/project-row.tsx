@@ -1,3 +1,4 @@
+import type { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@/components/ui/button';
@@ -16,7 +17,7 @@ type ProjectRowProps = {
 export default function ProjectRow({
   project,
   number,
-}: ProjectRowProps): React.ReactElement {
+}: ProjectRowProps): ReactElement {
   const { t } = useTranslation();
   const bullets = t(`projects.items.${project.id}.bullets`, {
     returnObjects: true,

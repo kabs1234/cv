@@ -1,3 +1,4 @@
+import type { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { Project } from '@/const';
@@ -11,7 +12,7 @@ type ProjectScreenshotProps = {
 export default function ProjectScreenshot({
   project,
   className,
-}: ProjectScreenshotProps): React.ReactElement {
+}: ProjectScreenshotProps): ReactElement {
   const { t } = useTranslation();
 
   return (

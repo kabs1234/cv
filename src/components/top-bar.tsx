@@ -1,3 +1,4 @@
+import type { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink, type NavLinkRenderProps } from 'react-router-dom';
 
@@ -21,7 +22,7 @@ function getNavLinkClassName({ isActive }: NavLinkRenderProps): string {
   );
 }
 
-export default function TopBar(): React.ReactElement {
+export default function TopBar(): ReactElement {
   const { t } = useTranslation();
 
   return (

@@ -1,9 +1,10 @@
+import type { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { CURRENT_YEAR, REPOSITORY_URL } from '@/const';
 import { EXTERNAL_LINK_PROPS } from '@/lib/links';
 
-export default function SiteFooter(): React.ReactElement {
+export default function SiteFooter(): ReactElement {
   const { t } = useTranslation();
 
   return (

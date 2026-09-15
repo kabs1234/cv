@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, type ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { SUPPORTED_LANGUAGES, type Language } from '@/i18n';
@@ -9,7 +9,7 @@ const NATIVE_LANGUAGE_NAMES: Readonly<Record<Language, string>> = {
   en: 'English',
 };
 
-export default function LanguageSwitcher(): React.ReactElement {
+export default function LanguageSwitcher(): ReactElement {
   const { t, i18n } = useTranslation();
 
   return (

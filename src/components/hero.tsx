@@ -1,4 +1,4 @@
-import { useId, type ReactNode } from 'react';
+import { useId, type ReactElement, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { ADDRESS_MAP_URL, CONTACTS } from '@/const';
@@ -14,7 +14,7 @@ function ContactRow({
   label,
   href,
   children,
-}: ContactRowProps): React.ReactElement {
+}: ContactRowProps): ReactElement {
   const linkProps = isExternalUrl(href) ? EXTERNAL_LINK_PROPS : {};
 
   return (
@@ -29,7 +29,7 @@ function ContactRow({
   );
 }
 
-export default function Hero(): React.ReactElement {
+export default function Hero(): ReactElement {
   const { t } = useTranslation();
   const headingId = useId();
 

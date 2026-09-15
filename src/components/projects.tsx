@@ -1,3 +1,4 @@
+import type { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { PROJECTS } from '@/const';
@@ -5,7 +6,7 @@ import { formatOrdinal } from '@/lib/format';
 
 import ProjectRow from './project-row';
 
-export default function Projects(): React.ReactElement {
+export default function Projects(): ReactElement {
   const { t } = useTranslation();
 
   return (

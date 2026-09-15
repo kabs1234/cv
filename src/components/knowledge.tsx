@@ -1,3 +1,4 @@
+import type { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { PROFICIENCY_SCALE, SPOKEN_LANGUAGES } from '@/const';
@@ -14,7 +15,7 @@ const SUBHEADING_CLASS_NAME =
 
 function ProficiencyMeter({
   level,
-}: ProficiencyMeterProps): React.ReactElement {
+}: ProficiencyMeterProps): ReactElement {
   const { t } = useTranslation();
   const segments = Array.from(
     { length: PROFICIENCY_SCALE },
@@ -37,7 +38,7 @@ function ProficiencyMeter({
   );
 }
 
-function Education(): React.ReactElement {
+function Education(): ReactElement {
   const { t } = useTranslation();
 
   return (
@@ -54,7 +55,7 @@ function Education(): React.ReactElement {
   );
 }
 
-function SpokenLanguages(): React.ReactElement {
+function SpokenLanguages(): ReactElement {
   const { t } = useTranslation();
 
   return (
@@ -82,7 +83,7 @@ function SpokenLanguages(): React.ReactElement {
 
 export default function Knowledge({
   number,
-}: NumberedSectionProps): React.ReactElement {
+}: NumberedSectionProps): ReactElement {
   const { t } = useTranslation();
 
   return (

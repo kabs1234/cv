@@ -1,4 +1,4 @@
-import { useId, type ReactNode } from 'react';
+import { useId, type ReactElement, type ReactNode } from 'react';
 
 import { formatOrdinal } from '@/lib/format';
 
@@ -15,7 +15,7 @@ export default function Section({
   number,
   title,
   children,
-}: SectionProps): React.ReactElement {
+}: SectionProps): ReactElement {
   const headingId = useId();
 
   return (

@@ -1,10 +1,11 @@
 import { Moon, Sun } from 'lucide-react';
+import type { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@/components/ui/button';
 import { useTheme } from '@/theme';
 
-export default function ThemeToggle(): React.ReactElement {
+export default function ThemeToggle(): ReactElement {
   const { t } = useTranslation();
   const [theme, toggleTheme] = useTheme();
   const isDark = theme === 'dark';

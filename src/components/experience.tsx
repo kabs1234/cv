@@ -1,3 +1,4 @@
+import type { ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import MetaList from './meta-list';
@@ -5,7 +6,7 @@ import Section, { type NumberedSectionProps } from './section';
 
 export default function Experience({
   number,
-}: NumberedSectionProps): React.ReactElement {
+}: NumberedSectionProps): ReactElement {
   const { t } = useTranslation();
   const facts = [
     t('experience.badges.petProjects'),

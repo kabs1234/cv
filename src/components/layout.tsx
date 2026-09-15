@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, type ReactElement } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 
 import SiteFooter from './site-footer';
@@ -10,7 +10,7 @@ function useScrollToTopOnNavigate(pathname: string): void {
   }, [pathname]);
 }
 
-export default function Layout(): React.ReactElement {
+export default function Layout(): ReactElement {
   const { pathname } = useLocation();
   useScrollToTopOnNavigate(pathname);
 

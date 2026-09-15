@@ -1,3 +1,5 @@
+import type { ReactElement } from 'react';
+
 import Experience from './experience';
 import FeaturedProjects from './featured-projects';
 import Hero from './hero';
@@ -11,7 +13,7 @@ const HOME_SECTIONS = [
   { id: 'knowledge', Component: Knowledge },
 ] as const;
 
-export default function Home(): React.ReactElement {
+export default function Home(): ReactElement {
   return (
     <>
       <Hero />

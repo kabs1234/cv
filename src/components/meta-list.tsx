@@ -1,3 +1,5 @@
+import type { ReactElement } from 'react';
+
 import { cn } from '@/lib/utils';
 
 type MetaListProps = {
@@ -8,7 +10,7 @@ type MetaListProps = {
 export default function MetaList({
   items,
   className,
-}: MetaListProps): React.ReactElement {
+}: MetaListProps): ReactElement {
   return (
     <ul className={cn('flex flex-wrap font-mono', className)}>
       {items.map((item, index) => (
