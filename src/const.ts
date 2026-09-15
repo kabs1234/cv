@@ -85,3 +85,11 @@ export const ADDRESS_MAP_URL = 'https://www.openstreetmap.org/relation/3386005';
 export const REPOSITORY_URL = 'https://github.com/kabs1234/cv';
 
 export const CURRENT_YEAR = new Date().getFullYear();
+
+export const PROFICIENCY_SCALE = 5;
+
+export const SPOKEN_LANGUAGES = [
+  { id: 'kz', proficiency: 5 },
+  { id: 'ru', proficiency: 5 },
+  { id: 'en', proficiency: 4 },
+] as const;

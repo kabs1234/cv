@@ -58,11 +58,13 @@
     }
   },
   "knowledge": {
+    "title": "Education & Languages",
     "education": "Education",
     "bachelorDegree": "Bachelor's Degree, Information and Communication Technologies",
     "university": "Abylkas Saginov Karaganda Technical University",
-    "dateRange": "September 2021 – June 2025",
+    "dateRange": "09.2021 — 06.2025",
     "languages": "Languages",
+    "proficiency": "Level {{level}} of {{max}}",
     "languageLevels": {
       "en": {
         "name": "English",
@@ -81,9 +83,8 @@
   "experience": {
     "title": "Experience",
     "projectPractice": "Project Practice (non-commercial)",
-    "period": "February 2023 — Present",
+    "period": "02.2023 — present",
     "mainDescription": "Built projects independently and as part of training, without a commercial contract but with a focus on real-world tasks, architecture, testing, and clean code.",
-    "achievements": "Key achievements:",
     "badges": {
       "petProjects": "8 pet projects",
       "spa": "SPA",
@@ -102,8 +103,7 @@
       "Redux",
       "HTML/CSS",
       "Responsive layout"
-    ],
-    "viewAllProjects": "View all projects"
+    ]
   },
   "projects": {
     "title": "Projects",

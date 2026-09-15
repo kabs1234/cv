@@ -1,103 +1,45 @@
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardFooter,
-} from '@/components/ui/card';
-import { Link } from 'react-router-dom';
-import { Briefcase, Code2, LayoutTemplate, GitBranch } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
 import { useTranslation } from 'react-i18next';
 
-export default function Experience() {
+import MetaList from './meta-list';
+import Section, { type NumberedSectionProps } from './section';
+
+export default function Experience({
+  number,
+}: NumberedSectionProps): React.ReactElement {
   const { t } = useTranslation();
+  const facts = [
+    t('experience.badges.petProjects'),
+    t('experience.badges.spa'),
+    t('experience.badges.productionReady'),
+  ];
   const achievements = t('experience.achievementsList', {
     returnObjects: true,
   });
   const technologies = t('experience.technologies', { returnObjects: true });
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-6">
-      <div className="text-center mb-8">
-        <Badge className="px-6 py-3 text-lg bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700">
-          <Briefcase className="w-5 h-5 mr-2" />
-          {t('experience.title')}
-        </Badge>
+    <Section number={number} title={t('experience.title')}>
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <h3 className="font-serif text-xl font-semibold">
+          {t('experience.projectPractice')}
+        </h3>
+        <p className="font-mono text-xs text-muted-foreground">
+          {t('experience.period')}
+        </p>
       </div>
-
-      <Card className="hover:shadow-lg transition-all hover:-translate-y-1">
-        <CardHeader>
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-            <CardTitle className="text-lg">
-              {t('experience.projectPractice')}
-            </CardTitle>
-            <Badge variant="outline" className="text-sm px-3 py-1">
-              {t('experience.period')}
-            </Badge>
-          </div>
-        </CardHeader>
-
-        <CardContent className="space-y-4">
-          <p className="text-gray-700">{t('experience.mainDescription')}</p>
-
-          <div className="flex flex-wrap gap-2">
-            <Badge variant="secondary" className="flex items-center gap-1">
-              <Code2 className="w-4 h-4" />
-              <span>{t('experience.badges.petProjects')}</span>
-            </Badge>
-            <Badge variant="secondary" className="flex items-center gap-1">
-              <LayoutTemplate className="w-4 h-4" />
-              <span>{t('experience.badges.spa')}</span>
-            </Badge>
-            <Badge variant="secondary" className="flex items-center gap-1">
-              <GitBranch className="w-4 h-4" />
-              <span>{t('experience.badges.productionReady')}</span>
-            </Badge>
-          </div>
-
-          <div className="mt-4">
-            <h4 className="font-medium text-gray-900 mb-2">
-              {t('experience.achievements')}
-            </h4>
-            <ul className="space-y-2 text-gray-700 list-disc pl-5">
-              {achievements.map((achievement) => (
-                <li key={achievement}>{achievement}</li>
-              ))}
-            </ul>
-          </div>
-        </CardContent>
-
-        <CardFooter className="flex flex-wrap gap-2">
-          {technologies.map((technology) => (
-            <Badge key={technology} variant="outline">
-              {technology}
-            </Badge>
-          ))}
-        </CardFooter>
-
-        <div className="flex justify-center">
-          <Link
-            to="/projects"
-            style={{
-              display: 'inline-block',
-              padding: '10px 24px',
-              background: '#1976d2',
-              color: '#fff',
-              borderRadius: '6px',
-              textDecoration: 'none',
-              fontWeight: 600,
-              boxShadow: '0 2px 8px rgba(25, 118, 210, 0.15)',
-              transition: 'background 0.2s',
-            }}
-            onMouseOver={(e) => (e.currentTarget.style.background = '#1565c0')}
-            onMouseOut={(e) => (e.currentTarget.style.background = '#1976d2')}
-            onClick={() => window.scrollTo({ top: 0, left: 0 })}
-          >
-            {t('experience.viewAllProjects')}
-          </Link>
-        </div>
-      </Card>
-    </div>
+      <MetaList items={facts} className="mt-3 text-xs" />
+      <p className="mt-3 text-body">{t('experience.mainDescription')}</p>
+      <ul className="dash-list mt-3 space-y-1 text-body">
+        {achievements.map((achievement) => (
+          <li key={achievement} className="break-inside-avoid">
+            {achievement}
+          </li>
+        ))}
+      </ul>
+      <MetaList
+        items={technologies}
+        className="mt-4 text-[0.6875rem] text-muted-foreground"
+      />
+    </Section>
   );
 }
