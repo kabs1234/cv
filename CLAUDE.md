@@ -24,9 +24,12 @@ A single-page CV/portfolio for one person (Aikhan Zhashkeyev), deployed to GitHu
 
 Route tree is small: `Layout` (Header + `<Outlet/>`) wraps `Home` (index → `About` + `Experience`) and `projects` (`Projects` → `ProjectInfo` cards).
 
-**Content vs. presentation.** `src/const.ts` holds structural project/skill data (tech stacks, GitHub/demo URLs, image paths, icon components, gradient classes). Human-readable text is *not* in `const.ts` — the fields there store i18n **key strings** (`'projects.1.title'`, `'skills.0'`) that components resolve with `t()`. Adding a project means editing both `const.ts` and both locale files, keeping the numeric indices aligned.
+**Content vs. presentation.** `src/const.ts` holds only structural project data (`id`, tech tags, GitHub/demo URLs, image paths) as an `as const` array. Human-readable text is _not_ there: each project's title and bullets live in the locale files under `projects.items.<id>`, and `ProjectInfo` resolves them from the id. Adding a project means an entry in `const.ts` plus a matching `projects.items.<id>` block in both locale files. Tech tags are shown verbatim in every language, so keep them language-neutral (`OOP`, `BEM`).
 
-**i18n.** `src/i18n.ts` imports both `public/locales/{en,ru}/translation.json` statically as bundled `resources` (no HTTP backend — the files sit in `public/` but are compiled in, so editing them requires a rebuild). Default language is `ru` with `en` fallback; the RU/EN switcher lives in `header.tsx`.
+**i18n.** `src/i18n.ts` imports both `public/locales/{en,ru}/translation.json` statically as bundled `resources` (no HTTP backend — the files sit in `public/` but are compiled in, so editing them requires a rebuild). Lists (`experience.achievementsList`, project bullets) are JSON arrays read with `t(key, { returnObjects: true })`.
+
+- **Typed keys.** `src/i18next.d.ts` points i18next's `CustomTypeOptions` at the RU resources, so `t()` only accepts existing keys and `npm run build` fails on a typo, including template keys like `` `projects.items.${id}.title` ``. `i18n.ts` also assigns each locale to the other's type, so a key present in one file but missing from the other is a type error too.
+- **Language state.** The default is `ru` with `en` fallback. The choice is persisted in `localStorage` (`cv-language`), and a `languageChanged` listener keeps `<html lang>` and `document.title` (`meta.title`) in sync. The RU/EN switcher is `src/components/language-switcher.tsx` (rendered by `header.tsx`); it maps `SUPPORTED_LANGUAGES` to tiles colored like the Languages section in `knowledge.tsx`, so keep the two color sets in sync.
 
 **Styling.** Tailwind v4 via `@tailwindcss/vite` — no `tailwind.config.js`; theme tokens are CSS variables in `src/index.css`. shadcn/ui (new-york style, neutral base) components live in `src/components/ui/`; add more with the shadcn CLI, which reads `components.json`. Icons are `lucide-react`. `@/` aliases `src/` (declared in both `vite.config.ts` and `tsconfig.app.json`).
 
@@ -49,12 +52,3 @@ for f in .claude/hooks/fixtures/*.ts*; do node -e 'const fs=require("fs");proces
 `.claude` is in ESLint's `ignores` so the bad fixtures don't fail `npm run lint`, and it sits outside every tsconfig `include`, so `npm run build` never type-checks the fixtures.
 
 To exercise the gate's deny path in a session where the skill is already loaded, don't edit the sentinel string in the hook — the edit itself lands in the transcript and satisfies the check. Pipe the payload through a filter that deletes `transcript_path` and clear the marker directory instead.
-
-## Known issues in the current WIP state
-
-i18n was added recently and is incomplete (`f4d0fd8 feat: add i18n to work. WIP (not full translation)`), with uncommitted changes in the working tree. Two concrete problems:
-
-1. **Duplicate `projects` key in both translation JSONs.** Each file declares `"projects"` twice at the top level — once as an object (`title`, `description`, `backToMain`) and again ~100 lines down as an array of project entries. `JSON.parse` keeps the last, so the array wins and `t('projects.title')` / `t('projects.backToMain')` render as raw key strings. There is also a `projectsList` key holding an identical copy of that array which nothing references. Resolving this means picking one shape and updating `const.ts` key strings plus `projects.tsx` to match.
-2. **`knowledge.tsx` is still hardcoded Russian** (education and languages sections) — it and `about.tsx`/`home.tsx`/`layout.tsx` are the components without `useTranslation`; only `knowledge.tsx` actually contains untranslated user-visible copy.
-
-Also note `projects.tsx` already calls `t()` on titles and bullets before passing them to `ProjectInfo`, which calls `t()` on them again — harmless double-translation, but don't add a third layer.
