@@ -12,6 +12,11 @@ import { useTranslation } from 'react-i18next';
 
 export default function Experience() {
   const { t } = useTranslation();
+  const achievements = t('experience.achievementsList', {
+    returnObjects: true,
+  });
+  const technologies = t('experience.technologies', { returnObjects: true });
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-6">
       <div className="text-center mb-8">
@@ -34,22 +39,20 @@ export default function Experience() {
         </CardHeader>
 
         <CardContent className="space-y-4">
-          <p className="text-gray-700">
-            {t('experience.mainDescription')}
-          </p>
+          <p className="text-gray-700">{t('experience.mainDescription')}</p>
 
           <div className="flex flex-wrap gap-2">
             <Badge variant="secondary" className="flex items-center gap-1">
               <Code2 className="w-4 h-4" />
-              <span>{t('experience.badges.0')}</span>
+              <span>{t('experience.badges.petProjects')}</span>
             </Badge>
             <Badge variant="secondary" className="flex items-center gap-1">
               <LayoutTemplate className="w-4 h-4" />
-              <span>{t('experience.badges.1')}</span>
+              <span>{t('experience.badges.spa')}</span>
             </Badge>
             <Badge variant="secondary" className="flex items-center gap-1">
               <GitBranch className="w-4 h-4" />
-              <span>{t('experience.badges.2')}</span>
+              <span>{t('experience.badges.productionReady')}</span>
             </Badge>
           </div>
 
@@ -58,21 +61,19 @@ export default function Experience() {
               {t('experience.achievements')}
             </h4>
             <ul className="space-y-2 text-gray-700 list-disc pl-5">
-              <li>{t('experience.achievementsList.0')}</li>
-              <li>{t('experience.achievementsList.1')}</li>
-              <li>{t('experience.achievementsList.2')}</li>
-              <li>{t('experience.achievementsList.3')}</li>
+              {achievements.map((achievement) => (
+                <li key={achievement}>{achievement}</li>
+              ))}
             </ul>
           </div>
         </CardContent>
 
         <CardFooter className="flex flex-wrap gap-2">
-          <Badge variant="outline">{t('experience.technologies.0')}</Badge>
-          <Badge variant="outline">{t('experience.technologies.1')}</Badge>
-          <Badge variant="outline">{t('experience.technologies.2')}</Badge>
-          <Badge variant="outline">{t('experience.technologies.3')}</Badge>
-          <Badge variant="outline">{t('experience.technologies.4')}</Badge>
-          <Badge variant="outline">{t('experience.adaptiveLayout')}</Badge>
+          {technologies.map((technology) => (
+            <Badge key={technology} variant="outline">
+              {technology}
+            </Badge>
+          ))}
         </CardFooter>
 
         <div className="flex justify-center">

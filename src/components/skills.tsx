@@ -15,39 +15,56 @@ export default function Skills() {
   const skillCategories = [
     {
       icon: Code,
-      title: t('skills.categories.0'),
+      title: t('skills.categories.languages'),
       gradient: 'from-amber-500 to-orange-500',
-      skills: [t('skills.0'), t('skills.1'), t('skills.2'), t('skills.3'), t('skills.4')],
+      skills: [
+        t('skills.technologies.htmlCss'),
+        t('skills.technologies.jsTs')
+      ],
     },
     {
       icon: LayoutTemplate,
-      title: t('skills.categories.1'),
+      title: t('skills.categories.frameworks'),
       gradient: 'from-blue-500 to-cyan-500',
-      skills: [t('skills.5'), t('skills.6'), t('skills.7'), t('skills.8')],
+      skills: [
+        t('skills.technologies.reactRedux'),
+        t('skills.technologies.reactRouter'),
+        t('skills.technologies.axios'),
+        t('skills.technologies.leaflet')
+      ],
     },
     {
       icon: TestTube2,
-      title: t('skills.categories.2'),
+      title: t('skills.categories.testing'),
       gradient: 'from-green-500 to-emerald-500',
-      skills: [t('skills.9'), t('skills.10'), t('skills.11')],
+      skills: [
+        t('skills.technologies.jest'),
+        t('skills.technologies.rtl'),
+        t('skills.technologies.vitest')
+      ],
     },
     {
       icon: Settings,
-      title: t('skills.categories.3'),
+      title: t('skills.categories.tools'),
       gradient: 'from-purple-500 to-fuchsia-500',
-      skills: [t('skills.12'), t('skills.13'), t('skills.14'), t('skills.15')],
+      skills: [
+        t('skills.technologies.git'),
+        t('skills.technologies.gulp'),
+        t('skills.technologies.webpack'),
+        t('skills.technologies.vite')
+      ],
     },
     {
       icon: Cpu,
-      title: t('skills.categories.4'),
+      title: t('skills.categories.approaches'),
       gradient: 'from-rose-500 to-pink-500',
       skills: [
-        t('skills.16'),
-        t('skills.17'),
-        t('skills.18'),
-        t('skills.19'),
-        t('skills.20'),
-        t('skills.21'),
+        t('skills.technologies.spa'),
+        t('skills.technologies.oop'),
+        t('skills.technologies.mvc'),
+        t('skills.technologies.rest'),
+        t('skills.technologies.mobileFirst'),
+        t('skills.technologies.pixelPerfect')
       ],
     },
   ];

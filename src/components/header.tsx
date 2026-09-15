@@ -37,11 +37,11 @@ export default function Header(): React.ReactElement {
           <div className="lg:col-span-2 space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl font-bold text-gray-900">
-                Жашкеев Айхан
+                {t('header.fullName')}
               </h1>
               <div className="relative">
                 <h2 className="text-2xl text-gray-600 font-medium">
-                  Junior Frontend Developer
+                  {t('header.jobTitle')}
                 </h2>
                 <div className="absolute -bottom-2 left-0 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
               </div>
@@ -61,7 +61,7 @@ export default function Header(): React.ReactElement {
               >
                 <Mail className="w-4 h-4 text-blue-600 flex-shrink-0" />
                 <div>
-                  <p className="text-xs text-gray-500">Email</p>
+                  <p className="text-xs text-gray-500">{t('header.contacts.email')}</p>
                   <p className="text-gray-700 font-medium text-sm">
                     azhashkeev@gmail.com
                   </p>
@@ -75,7 +75,7 @@ export default function Header(): React.ReactElement {
               >
                 <Send className="w-4 h-4 text-blue-500 flex-shrink-0" />
                 <div>
-                  <p className="text-xs text-gray-500">Telegram</p>
+                  <p className="text-xs text-gray-500">{t('header.contacts.telegram')}</p>
                   <p className="text-gray-700 font-medium text-sm">@aikhan24</p>
                 </div>
               </a>
@@ -93,7 +93,7 @@ export default function Header(): React.ReactElement {
                   />
                 </div>
                 <div>
-                  <p className="text-xs text-gray-500">Github</p>
+                  <p className="text-xs text-gray-500">{t('header.contacts.github')}</p>
                   <p className="text-gray-700 font-medium text-sm">kabs1234</p>
                 </div>
               </a>
@@ -101,7 +101,7 @@ export default function Header(): React.ReactElement {
               <div className="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-50 transition-colors">
                 <Phone className="w-4 h-4 text-green-600 flex-shrink-0" />
                 <div>
-                  <p className="text-xs text-gray-500">Phone</p>
+                  <p className="text-xs text-gray-500">{t('header.contacts.phone')}</p>
                   <p className="text-gray-700 font-medium text-sm">
                     +7 707 989 69 38
                   </p>

@@ -1,25 +1,28 @@
 import { GraduationCap, Globe, Calendar } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Knowledge() {
+  const { t } = useTranslation();
+  
   const languages = [
     {
       code: 'EN',
-      name: 'Английский',
-      level: 'B2 (чтение документации, техническое общение)',
+      name: t('knowledge.languageLevels.en.name'),
+      level: t('knowledge.languageLevels.en.level'),
       proficiency: 4,
       bgColor: 'bg-blue-500',
     },
     {
       code: 'RU',
-      name: 'Русский',
-      level: 'свободно',
+      name: t('knowledge.languageLevels.ru.name'),
+      level: t('knowledge.languageLevels.ru.level'),
       proficiency: 5,
       bgColor: 'bg-red-500',
     },
     {
       code: 'KZ',
-      name: 'Казахский',
-      level: 'родной',
+      name: t('knowledge.languageLevels.kz.name'),
+      level: t('knowledge.languageLevels.kz.level'),
       proficiency: 5,
       bgColor: 'bg-green-500',
     },
@@ -33,7 +36,7 @@ export default function Knowledge() {
           <div className="p-2 rounded-lg bg-gradient-to-r from-indigo-500 to-blue-600 shadow-lg mb-1">
             <GraduationCap className="w-5 h-5 text-white" />
           </div>
-          <h2 className="text-lg font-semibold text-gray-900 text-center">Образование</h2>
+          <h2 className="text-lg font-semibold text-gray-900 text-center">{t('knowledge.education')}</h2>
         </div>
 
         <div className="space-y-2 p-3 bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg border border-indigo-100">
@@ -43,15 +46,15 @@ export default function Knowledge() {
             </div>
             <div className="flex-1 space-y-2">
               <h3 className="font-medium text-gray-900 text-sm leading-tight">
-                Бакалавриат, Информационно-коммуникационные технологии
+                {t('knowledge.bachelorDegree')}
               </h3>
               <p className="text-indigo-700 font-normal text-xs">
-                Карагандинский технический университет имени Абылкаса Сагинова
+                {t('knowledge.university')}
               </p>
               <div className="flex items-center gap-2 text-gray-600 text-xs">
                 <div className="flex items-center gap-1">
                   <Calendar className="w-4 h-4" />
-                  <span>Сентябрь 2021 – Июнь 2025</span>
+                  <span>{t('knowledge.dateRange')}</span>
                 </div>
               </div>
             </div>
@@ -65,7 +68,7 @@ export default function Knowledge() {
           <div className="p-2 rounded-lg bg-gradient-to-r from-rose-500 to-pink-600 shadow-lg mb-1">
             <Globe className="w-5 h-5 text-white" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 text-center">Языки</h2>
+          <h2 className="text-2xl font-bold text-gray-900 text-center">{t('knowledge.languages')}</h2>
         </div>
 
         <div className="space-y-2">
