@@ -1,37 +1,20 @@
 import { Mail, Phone, Send } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-export default function Header(): React.ReactElement {
-  const { t, i18n } = useTranslation();
+import LanguageSwitcher from './language-switcher';
 
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
+export default function Header(): React.ReactElement {
+  const { t } = useTranslation();
+
   return (
     <div className="relative overflow-hidden bg-white shadow-sm">
-      {/* Language Switcher */}
-      <div className="absolute top-4 right-6 z-20">
-        <button
-          className={`px-2 py-1 rounded-l border border-gray-300 bg-white ${
-            i18n.language === 'ru' ? 'font-bold text-blue-600' : ''
-          }`}
-          onClick={() => changeLanguage('ru')}
-        >
-          RU
-        </button>
-        <button
-          className={`px-2 py-1 rounded-r border border-gray-300 bg-white ${
-            i18n.language === 'en' ? 'font-bold text-blue-600' : ''
-          }`}
-          onClick={() => changeLanguage('en')}
-        >
-          EN
-        </button>
-      </div>
       {/* Оригинальный градиентный фон */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
 
-      <div className="relative max-w-6xl mx-auto px-6 py-12 z-10">
+      <div className="relative max-w-6xl mx-auto px-6 pt-4 pb-12 z-10">
+        <div className="flex justify-end mb-4">
+          <LanguageSwitcher />
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Левая колонка - Информация */}
           <div className="lg:col-span-2 space-y-8">
