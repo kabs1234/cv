@@ -111,7 +111,6 @@
   },
   "projects": {
     "title": "Projects",
-    "backToMain": "← Back to main",
     "screenshotAlt": "Screenshot of {{title}}",
     "demo": "Demo",
     "code": "Code",

@@ -111,7 +111,6 @@
   },
   "projects": {
     "title": "Проекты",
-    "backToMain": "← На главную",
     "screenshotAlt": "Скриншот проекта {{title}}",
     "demo": "Демо",
     "code": "Код",
