@@ -7,6 +7,7 @@
     "address": "Address",
     "city": "Karaganda, Kazakhstan",
     "fullName": "Aikhan Zhashkeyev",
+    "shortName": "A. Zhashkeyev",
     "jobTitle": "Junior Frontend Developer",
     "languageSwitcher": "Language",
     "contacts": {
@@ -15,6 +16,15 @@
       "github": "Github",
       "phone": "Phone"
     }
+  },
+  "nav": {
+    "label": "Main navigation",
+    "resume": "Resume",
+    "projects": "Projects"
+  },
+  "footer": {
+    "builtWith": "Built with React, TypeScript and Vite",
+    "source": "Source code"
   },
   "skills": {
     "sectionTitle": "Technical Skills",

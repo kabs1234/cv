@@ -66,3 +66,22 @@ export const PROJECTS = [
 ] as const;
 
 export type Project = (typeof PROJECTS)[number];
+
+export type ProjectId = Project['id'];
+
+export const CONTACTS = [
+  {
+    id: 'email',
+    href: 'mailto:azhashkeev@gmail.com',
+    value: 'azhashkeev@gmail.com',
+  },
+  { id: 'telegram', href: 'https://t.me/aikhan24', value: '@aikhan24' },
+  { id: 'github', href: 'https://github.com/kabs1234', value: 'kabs1234' },
+  { id: 'phone', href: 'tel:+77079896938', value: '+7 707 989 69 38' },
+] as const;
+
+export const ADDRESS_MAP_URL = 'https://www.openstreetmap.org/relation/3386005';
+
+export const REPOSITORY_URL = 'https://github.com/kabs1234/cv';
+
+export const CURRENT_YEAR = new Date().getFullYear();
